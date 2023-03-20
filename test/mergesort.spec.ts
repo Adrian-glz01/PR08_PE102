@@ -25,4 +25,10 @@ describe('MergeSort', () => {
     solver.logic();
     expect(solver.getData()).to.be.eql([1,2,3,4,5,6,7,8,9,10]);
   });
+  it ('should return [1,2,3,4,5,6,7,8,9,10]', () => {
+    const solver = new Solver(array3, new MergeSort());
+    solver.setStrategy(new BubbleSort());
+    solver.logic();
+    expect(solver.getData()).to.be.eql([1,2,3,4,5,6,7,8,9,10]);
+  });
 });
